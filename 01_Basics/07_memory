@@ -1,0 +1,31 @@
+// How memory allocation works here 
+
+// Memory stack(premitive ), Heap (non-primitive)
+
+// Premitive data types : give copy 
+let myChannelName = "fundamatrix" // value not change beacuse we provide the copy 
+
+let anotherName = myChannelName // here we dont provide the orignal we give copy 
+anotherName = "dsaWithAlok"
+
+console.log(anotherName); //dsaWithAlok
+console.log(myChannelName); //fundamatrix  | due to copy the myChannelName value remain same because copy changes 
+
+// Non primitive goes into heap 
+// Non primitive data types : gives reference of original value not copy 
+let userOne = {
+    email : "a1@gmail.com",
+    upi : "user@ybl"
+}
+
+
+let userTwo = userOne // this will give the reference of the useOne from the heap memory 
+
+// value change because we provide the reference not the copy 
+
+userTwo.email = "a2@gmail.com" // dot operator use to access the properties of the object
+
+console.log(userOne.email); //a2@gmail.com
+console.log(userTwo.email); //a2@gmail.com
+
+
