@@ -27,6 +27,6 @@ let No = 34
 let stringNo = String(No);
 
 console.log(stringNo);
-console.log(typeof stringNo); // Number is converted into string i mean its data types 
+console.log(typeof stringNo); // Number is converted into string i mean its data types
 
 
