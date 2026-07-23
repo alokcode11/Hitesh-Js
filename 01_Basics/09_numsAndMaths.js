@@ -1,21 +1,21 @@
-// const score = 400 // js fetch auto that this is a no 
+const score = 400 // js fetch auto that this is a no 
 
-// const balance = new Number(500) // explicilty add no hi chahye 
+const balance = new Number(500) // explicilty add no hi chahye 
 
-// console.log(score); // 400
-// console.log(balance); // [Number: 500]
-// console.log(typeof balance); // object
-// console.log(balance.toString().length); // 3 |  Convert number to string so we can use string properties and methods.
-// console.log(balance.toFixed(2)); //500.00
+console.log(score); // 400
+console.log(balance); // [Number: 500]
+console.log(typeof balance); // object
+console.log(balance.toString().length); // 3 |  Convert number to string so we can use string properties and methods.
+console.log(balance.toFixed(2)); //500.00
 
-// const otherNo = 23.89
-// const otherNo1 = 123.89
-// console.log(otherNo.toPrecision(3)); //23.9
-// console.log(otherNo1.toPrecision(3)); //124
+const otherNo = 23.89
+const otherNo1 = 123.89
+console.log(otherNo.toPrecision(3)); //23.9
+console.log(otherNo1.toPrecision(3)); //124
 
-// const hundreds = 100000000
-// console.log(hundreds.toLocaleString()); //100,000,000
-// console.log(hundreds.toLocaleString("en-IN")); //10,00,00,000
+const hundreds = 100000000
+console.log(hundreds.toLocaleString()); //100,000,000
+console.log(hundreds.toLocaleString("en-IN")); //10,00,00,000
 
 
 console.log(Math); // Object [Math] {} || Object that has alots of properties 
