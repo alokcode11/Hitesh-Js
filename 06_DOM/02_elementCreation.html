@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: black; color: white;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+ <script>
+   const parent = document.querySelector('.parent')
+   console.log(parent); // querySelector return one element object not HTMLCollection 
+   console.log(parent.children); // Gives HTMLCollection
+   console.log(parent.children[0]); // <div class="day">Monday</div> 
+   console.log(parent.children[0].innerHTML); // Monday 
+
+   // ab aap kahenge loop lagega hi ni qki HTMLColllection hai array me convert karna hoga 
+   // But classic for loop run 
+
+   //    Because a classic for loop only needs two things:
+
+   // length
+   // Indexed access ([i])
+
+   // An HTMLCollection has both
+
+   for (let i = 0; i  < parent.children.length; i++) { // parent not gives us HTMLCollection so parent.children
+    console.log(parent.children[i].innerHTML);
+    
+    
+   }
+
+   // parent -> child
+   parent.children[1].style.color = "orange"
+   console.log(parent.firstElementChild); //<div class="day">Monday</div>
+   console.log(parent.lastElementChild); //<div class="day">Thursday</div>
+
+   // child -> parent
+   const dayOne = document.querySelector('.day') //first one dega 
+   console.log(dayOne); //<div class="day">Monday</div>
+   console.log(dayOne.parentElement); // gives the parent div
+   console.log(dayOne.nextElementSibling); // <div class="day" style="color: orange;">Tuesday</div> || Gives us next siblings 
+
+   console.log("NODES:", parent.childNodes); // expected output is 4 
+// but it gives 9 nodes because line break is also counted as one node and treated as text 
+// NodeList  is not like an array its like tree data structure 
+// DOM -> tree structure 
+// in HTML break line is counted uske baad ap kitne bhi line add kijiye count ni hoga 
+</script>
+</html>
