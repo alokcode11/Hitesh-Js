@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Creation</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    
+</body>
+<script>
+    // Impty page hai ab hume yha element create karna hai pehle hum fetch kar rhe the 
+    // getElementById, querySelector etc... 
+
+// similar to createAttribute we have createElement
+const div = document.createElement('div') // similary we create h1 || Not visible on the webpage 
+console.log(div); //<div></div>
+
+// Now we are going to add properties inside the div 
+// like className, id etc...
+div.className = "main"
+// div.id = "myId"
+div.id = Math.round(Math.random() * 10 + 1) // everyTime it gives me random id 
+
+// These are the bydefault attribute ie. className, id etc... 
+//  so now we are going to create custom attribute 
+div.setAttribute("title", "generated title") // key - value pair {attribute and its value}
+div.style.backgroundColor = "green"
+div.style.padding = "12px"
+// div.innerText = "DOM"
+
+// setAttribute like syntax is most used and more preferable beacuse ye override ni karta hai 
+// Jo bhi value hai waha pe usko pehle select karke lata hai then apne value se usko set karta hia 
+// jabki setAttribute leke ni ata hai directky set karta hai 
+// so ek round trip bachta hai i mean complexity 
+// dot(.) costly hai 
+// innerText ke place pe setTextNode istemal karnge 
+const addText = document.createTextNode("Chai and Code")
+
+// text create ho gaya hai ab isko append karna hoga div me 
+div.appendChild(addText)
+// lots of debate here why we dont use div.innerText but that is complex than this one repect to time  but here again we have two steps so which one we have to prefer 
+
+// now for rendering into the page we have to attached this to document
+document.body.appendChild(div)
+
+
+// But still it is not reflected on the page 
+// becuase right now div is inside the memory 
+// page me ni aya to document usko attach karga then appear hoga  
+
+</script>
+</html>
